@@ -1,0 +1,11 @@
+{
+  "name": "launch-countdown-timer",
+  "version": "1.0.0",
+  "description": "A countdown timer",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "Anirudh Dutta",
+  "license": "ISC"
+}
