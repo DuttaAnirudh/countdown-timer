@@ -1,10 +1,99 @@
-body {
-  background-color: #333;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.box {
-  height: 8rem;
-  width: 300px;
-  background-color: plum;
-  color: #333;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(345, 95%, 68%);
+  --color-secondary: hsl(237, 18%, 59%);
+  --color-tertiary: hsl(236, 21%, 26%);
+  --color-blue-dark-1: hsl(234, 17%, 12%);
+  --color-blue-dark-2: hsl(235, 16%, 14%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../../images/bg-stars.svg);
+  background-size: cover;
+  background-color: var(--color-blue-dark-2);
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  color: var(--color-secondary);
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12rem;
+}
+
+.heading-1 {
+  color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.heading-2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 0.5rem;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  gap: 3.5rem;
+  width: 79%;
+  margin: 0 auto;
+}
+
+.timer__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.timer__time-box {
+  text-align: center;
+}
+
+.timer__time-count {
+  width: 15rem;
+  max-width: 15rem;
+  color: var(--color-primary);
+  background-color: var(--color-tertiary);
+  font-size: 5rem;
+  padding-block: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footer__icon {
+  height: 2.5rem;
+  width: 2.5rem;
 }

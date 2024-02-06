@@ -1,10 +1,10 @@
 'use strict';
 
 // VARIABLES
-const daysEl = document.querySelector('.days');
-const hoursEl = document.querySelector('.hours');
-const minutesEl = document.querySelector('.minutes');
-const secondsEl = document.querySelector('.seconds');
+const daysEl = document.querySelector('#days');
+const hoursEl = document.querySelector('#hours');
+const minutesEl = document.querySelector('#minutes');
+const secondsEl = document.querySelector('#seconds');
 
 // Pre-set
 const init = function () {
@@ -15,7 +15,7 @@ const init = function () {
 };
 init();
 
-// New Year Date
+// New Year Date & Time
 const newYearDate = new Date(2025, 0, 1).getTime();
 
 const startLogoutTimer = setInterval(function () {
@@ -26,12 +26,18 @@ const startLogoutTimer = setInterval(function () {
   let time = newYearDate - currentDate;
 
   // In each call, print the remaining time to UI
-  daysEl.textContent = Math.floor(time / (1000 * 60 * 60 * 24));
-  hoursEl.textContent = Math.floor(
-    (time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  minutesEl.textContent = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
-  secondsEl.textContent = Math.floor((time % (1000 * 60)) / 1000);
+  daysEl.textContent = String(
+    Math.floor(time / (1000 * 60 * 60 * 24))
+  ).padStart(2, 0);
+  hoursEl.textContent = String(
+    Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  ).padStart(2, 0);
+  minutesEl.textContent = String(
+    Math.floor((time % (1000 * 60 * 60)) / (1000 * 60))
+  ).padStart(2, 0);
+  secondsEl.textContent = String(
+    Math.floor((time % (1000 * 60)) / 1000)
+  ).padStart(2, 0);
 
   //   Decrease 1s
   time--;

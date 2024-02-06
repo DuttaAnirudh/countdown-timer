@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -11,16 +10,80 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/css/style.css" />
 
     <title>Launch countdown timer</title>
   </head>
   <body>
-    <div class="box">
-      <div class="days">100</div>
-      <div class="hours">12</div>
-      <div class="minutes">45</div>
-      <div class="seconds">10</div>
+    <div class="container">
+      <!-- HEADING -->
+      <h1 class="heading-1">Time Left untill NEW YEAR 2025</h1>
+
+      <!-- TIMER -->
+      <div class="timer">
+        <div class="timer__container">
+          <!-- TIMER DAYS COUNT -->
+          <div class="timer__time-box">
+            <p class="timer__time-count" id="days">08</p>
+            <h2 class="heading-2">Days</h2>
+          </div>
+
+          <!-- TIMER HOURS COUNT -->
+          <div class="timer__time-box">
+            <p class="timer__time-count" id="hours">23</p>
+            <h2 class="heading-2">Hours</h2>
+          </div>
+        </div>
+        <div class="timer__container">
+          <!-- TIMER MINUTES COUNT -->
+          <div class="timer__time-box">
+            <p class="timer__time-count" id="minutes">55</p>
+            <h2 class="heading-2">Minutes</h2>
+          </div>
+
+          <!-- TIMER SECONDS COUNT -->
+          <div class="timer__time-box">
+            <p class="timer__time-count" id="seconds">41</p>
+            <h2 class="heading-2">Seconds</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="" class="footer__link"
+              ><img
+                src="/images/icon-facebook.svg"
+                alt="Facebook link icon"
+                class="footer__icon"
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link"
+              ><img
+                src="/images/icon-pinterest.svg"
+                alt="Pinterest link icon"
+                class="footer__icon"
+            /></a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link"
+              ><img
+                src="/images/icon-instagram.svg"
+                alt="Instagram link icon"
+                class="footer__icon"
+            /></a>
+          </li>
+        </ul>
+      </footer>
     </div>
     <script src="/src/js/script.js"></script>
   </body>
