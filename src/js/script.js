@@ -6,15 +6,6 @@ const hoursEl = document.querySelector('#hours');
 const minutesEl = document.querySelector('#minutes');
 const secondsEl = document.querySelector('#seconds');
 
-// Pre-set
-const init = function () {
-  daysEl.textContent = '';
-  hoursEl.textContent = '';
-  minutesEl.textContent = '';
-  secondsEl.textContent = '';
-};
-init();
-
 // New Year Date & Time
 const newYearDate = new Date(2025, 0, 1).getTime();
 

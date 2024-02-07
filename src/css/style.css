@@ -85,6 +85,13 @@ body {
   border-radius: 2rem;
 }
 
+.timer__loader {
+  fill: var(--color-primary);
+  height: 5rem;
+  width: 5rem;
+  animation: loader-rotate 1s cubic-bezier(0.91, 0.85, 0.43, 0.45) infinite;
+}
+
 .footer__list {
   list-style: none;
   display: flex;
@@ -96,4 +103,11 @@ body {
 .footer__icon {
   height: 2.5rem;
   width: 2.5rem;
+}
+
+/* ANIMATIONS */
+@keyframes loader-rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
